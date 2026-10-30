@@ -1,0 +1,179 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2b (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037a396
+--- 0x4037a396: esp_cpu_wait_for_intr at /Users/jincheng/esp/esp-idf-v5.5.5/components/esp_hw_support/cpu.c:64
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x16a8
+load:0x403c8700,len:0xe88
+load:0x403cb700,len:0x3184
+entry 0x403c8948
+I (24) boot: ESP-IDF v5.5.5 2nd stage bootloader
+I (24) boot: compile time Oct 29 2026 19:29:04
+I (25) boot: Multicore bootloader
+I (25) boot: chip revision: v0.2
+I (25) boot: efuse block revision: v1.4
+I (25) qio_mode: Enabling default flash chip QIO
+I (26) boot.esp32s3: Boot SPI Speed : 80MHz
+I (26) boot.esp32s3: SPI Mode       : QIO
+I (26) boot.esp32s3: SPI Flash Size : 32MB
+I (26) boot: Enabling RNG early entropy source...
+I (26) boot: Partition Table:
+I (26) boot: ## Label            Usage          Type ST Offset   Length
+I (27) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (27) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (28) boot:  2 factory          factory app      00 00 00010000 00600000
+I (28) boot:  3 pet_nvs          WiFi data        01 02 00610000 00010000
+I (28) boot: End of partition table
+I (29) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=2e530h (189744) map
+I (59) esp_image: segment 1: paddr=0003e558 vaddr=3fc97200 size=01ac0h (  6848) load
+I (60) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=78b38h (494392) map
+I (137) esp_image: segment 3: paddr=000b8b60 vaddr=3fc98cc0 size=01c1ch (  7196) load
+I (139) esp_image: segment 4: paddr=000ba784 vaddr=40374000 size=131b8h ( 78264) load
+I (155) esp_image: segment 5: paddr=000cd944 vaddr=50000000 size=00020h (    32) load
+I (163) boot: Loaded app from partition at offset 0x10000
+I (163) boot: Disabling RNG early entropy source...
+I (164) octal_psram: vendor id    : 0x0d (AP)
+I (164) octal_psram: dev id       : 0x02 (generation 3)
+I (164) octal_psram: density      : 0x03 (64 Mbit)
+I (164) octal_psram: good-die     : 0x01 (Pass)
+I (164) octal_psram: Latency      : 0x01 (Fixed)
+I (165) octal_psram: VCC          : 0x01 (3V)
+I (165) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (165) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (165) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (165) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (166) octal_psram: DriveStrength: 0x00 (1/1)
+I (166) MSPI Timing: Enter psram timing tuning
+I (167) esp_psram: Found 8MB PSRAM device
+I (167) esp_psram: Speed: 80MHz
+I (167) cpu_start: Multicore app
+I (574) esp_psram: SPI SRAM memory test OK
+I (582) cpu_start: Pro cpu start user code
+I (582) cpu_start: cpu freq: 240000000 Hz
+I (583) app_init: Application information:
+I (583) app_init: Project name:     amoled_pet
+I (583) app_init: App version:      0.4.3
+I (583) app_init: Compile time:     Oct 29 2026 21:47:38
+I (583) app_init: ELF file SHA256:  eb9d59eb3...
+I (583) app_init: ESP-IDF:          v5.5.5
+I (583) efuse_init: Min chip rev:     v0.0
+I (584) efuse_init: Max chip rev:     v0.99 
+I (584) efuse_init: Chip rev:         v0.2
+I (584) heap_init: Initializing. RAM available for dynamic allocation:
+I (584) heap_init: At 3FC9B790 len 0004DF80 (311 KiB): RAM
+I (584) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (584) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (585) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM
+I (585) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (586) spi_flash: detected chip: gd
+I (586) spi_flash: flash io: qio
+I (586) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (586) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (587) main_task: Started on CPU0
+I (587) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (588) main_task: Calling app_main()
+I (598) pet_store: restored gen=149 satiety=68 xp=26 meals=1
+I (599) esp_lvgl:adapter: LVGL adapter initialized successfully
+I (599) ESP32-S3-Touch-AMOLED-1.75C: Initialize SPI bus
+I (600) co5300: version: 2.2.0
+I (600) co5300_spi: LCD panel create success, version: 2.2.0
+W (761) co5300_spi: The 3Ah command has been used and will be overwritten by external initialization sequence
+W (1964) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs
+I (2039) CST9217: Checkcode: 0x204ECACA
+I (2041) CST9217: Resolution X: 466, Y: 466
+I (2043) CST9217: Chip Type: 0x9217, ProjectID: 0x5734
+W (2043) esp_lvgl:touch: LV_USE_GESTURE_RECOGNITION is disabled; only single-point pointer events are available
+I (2043) esp_lvgl:touch: Touch input device registered successfully (IRQ mode: enabled)
+I (2045) esp_lvgl:adapter: LVGL task started successfully
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0x2b (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40386ffe
+--- 0x40386ffe: _xt_context_save at /Users/jincheng/esp/esp-idf-v5.5.5/components/xtensa/xtensa_context.S:116
+pro cpu reset by JTAG
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x16a8
+load:0x403c8700,len:0xe88
+load:0x403cb700,len:0x3184
+entry 0x403c8948
+I (26) boot: ESP-IDF v5.5.5 2nd stage bootloader
+I (26) boot: compile time Oct 29 2026 19:29:04
+I (26) boot: Multicore bootloader
+I (27) boot: chip revision: v0.2
+I (27) boot: efuse block revision: v1.4
+I (27) qio_mode: Enabling default flash chip QIO
+I (27) boot.esp32s3: Boot SPI Speed : 80MHz
+I (27) boot.esp32s3: SPI Mode       : QIO
+I (27) boot.esp32s3: SPI Flash Size : 32MB
+I (28) boot: Enabling RNG early entropy source...
+I (28) boot: Partition Table:
+I (28) boot: ## Label            Usage          Type ST Offset   Length
+I (28) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (29) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (29) boot:  2 factory          factory app      00 00 00010000 00600000
+I (29) boot:  3 pet_nvs          WiFi data        01 02 00610000 00010000
+I (30) boot: End of partition table
+I (30) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=2e530h (189744) map
+I (60) esp_image: segment 1: paddr=0003e558 vaddr=3fc97200 size=01ac0h (  6848) load
+I (62) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=78b38h (494392) map
+I (139) esp_image: segment 3: paddr=000b8b60 vaddr=3fc98cc0 size=01c1ch (  7196) load
+I (141) esp_image: segment 4: paddr=000ba784 vaddr=40374000 size=131b8h ( 78264) load
+I (157) esp_image: segment 5: paddr=000cd944 vaddr=50000000 size=00020h (    32) load
+I (165) boot: Loaded app from partition at offset 0x10000
+I (165) boot: Disabling RNG early entropy source...
+I (166) octal_psram: vendor id    : 0x0d (AP)
+I (166) octal_psram: dev id       : 0x02 (generation 3)
+I (166) octal_psram: density      : 0x03 (64 Mbit)
+I (166) octal_psram: good-die     : 0x01 (Pass)
+I (166) octal_psram: Latency      : 0x01 (Fixed)
+I (167) octal_psram: VCC          : 0x01 (3V)
+I (167) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (167) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (167) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (168) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (168) octal_psram: DriveStrength: 0x00 (1/1)
+I (168) MSPI Timing: Enter psram timing tuning
+I (169) esp_psram: Found 8MB PSRAM device
+I (169) esp_psram: Speed: 80MHz
+I (169) cpu_start: Multicore app
+I (576) esp_psram: SPI SRAM memory test OK
+I (584) cpu_start: Pro cpu start user code
+I (584) cpu_start: cpu freq: 240000000 Hz
+I (585) app_init: Application information:
+I (585) app_init: Project name:     amoled_pet
+I (585) app_init: App version:      0.4.3
+I (585) app_init: Compile time:     Oct 29 2026 21:47:38
+I (585) app_init: ELF file SHA256:  eb9d59eb3...
+I (585) app_init: ESP-IDF:          v5.5.5
+I (585) efuse_init: Min chip rev:     v0.0
+I (586) efuse_init: Max chip rev:     v0.99 
+I (586) efuse_init: Chip rev:         v0.2
+I (586) heap_init: Initializing. RAM available for dynamic allocation:
+I (586) heap_init: At 3FC9B790 len 0004DF80 (311 KiB): RAM
+I (586) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (586) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (586) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM
+I (587) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (587) spi_flash: detected chip: gd
+I (587) spi_flash: flash io: qio
+I (588) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (588) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (589) main_task: Started on CPU0
+I (589) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (590) main_task: Calling app_main()
+I (600) pet_store: restored gen=149 satiety=68 xp=26 meals=1
+I (601) esp_lvgl:adapter: LVGL adapter initialized successfully
+I (601) ESP32-S3-Touch-AMOLED-1.75C: Initialize SPI bus
+I (602) co5300: version: 2.2.0
+I (602) co5300_spi: LCD panel create success, version: 2.2.0
+W (763) co5300_spi: The 3Ah command has been used and will be overwritten by external initialization sequence
+W (1966) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs
+I (2041) CST9217: Checkcode: 0x204ECACA
+I (2043) CST9217: Resolution X: 466, Y: 466
+I (2045) CST9217: Chip Type: 0x9217, ProjectID: 0x5734
+W (2045) esp_lvgl:touch: LV_USE_GESTURE_RECOGNITION is disabled; only single-point pointer events are available
+I (2045) esp_lvgl:touch: Touch input device registered successfully (IRQ mode: enabled)
+I (2047) esp_lvgl:adapter: LVGL task started successfully

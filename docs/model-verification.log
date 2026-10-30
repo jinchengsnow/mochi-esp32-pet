@@ -1,0 +1,2 @@
+PASS: hunger/meal limits, growth/cooldown, restore/offline pause, wraparound, animation boundaries
+PASS: save round trip, every truncation/bit flip, range validation, generation rollover/fallback

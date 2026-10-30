@@ -1,0 +1,17 @@
+build/
+build-host/
+managed_components/
+sdkconfig
+sdkconfig.old
+__pycache__/
+.DS_Store
+dist/
+backups/
+archives/
+log.amoled_pet.*.txt
+
+# Local serial/build logs and credentials
+log.*.txt
+.env
+.env.*
+*.pem

@@ -1,0 +1,100 @@
+0x40000400 in ?? ()
+[New Thread 1070207976]
+[New Thread 1070296052]
+[New Thread 1070251660]
+[New Thread 1070195072]
+[New Thread 1070522096]
+[New Thread 1070204200]
+[New Thread 1070188992]
+[New Thread 1070511352]
+[New Thread 1070190624]
+  Id   Target Id                                                     Frame 
+* 1    Thread 1070206088 "IDLE0" (Name: IDLE0, State: Running @CPU0) 0x40000400 in ?? ()
+  2    Thread 1070207976 "IDLE1" (Name: IDLE1, State: Running @CPU1) 0x40000400 in ?? ()
+  3    Thread 1070296052 "pet_power" (Name: pet_power)               0x400559e0 in ?? ()
+  4    Thread 1070251660 "lvgl" (Name: lvgl)                         0x400559e0 in ?? ()
+  5    Thread 1070195072 "esp_timer" (Name: esp_timer)               0x400559e0 in ?? ()
+  6    Thread 1070522096 "swdraw" (Name: swdraw)                     0x400559e0 in ?? ()
+  7    Thread 1070204200 "main" (Name: main)                         0x400559e0 in ?? ()
+  8    Thread 1070188992 "ipc0" (Name: ipc0)                         0x400559e0 in ?? ()
+  9    Thread 1070511352 "pet_save" (Name: pet_save)                 0x400559e0 in ?? ()
+  10   Thread 1070190624 "ipc1" (Name: ipc1)                         0x400559e0 in ?? ()
+
+Thread 10 (Thread 1070190624 "ipc1" (Name: ipc1)):
+#0  0x400559e0 in ?? ()
+#1  0x4037db11 in vPortClearInterruptMaskFromISR (prev_level=<optimized out>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+#2  vPortExitCritical (mux=0x3fc97310 <xKernelLock>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:524
+#3  0x4037f97b in ulTaskGenericNotifyTake (uxIndexToWait=0, xClearCountOnExit=1, xTicksToWait=4294967295) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/tasks.c:5768
+#4  0x40375c32 in ipc_task (arg=0x1) at /Users/jincheng/esp/esp-idf-v5.5.5/components/esp_system/esp_ipc.c:62
+
+Thread 9 (Thread 1070511352 "pet_save" (Name: pet_save)):
+#0  0x400559e0 in ?? ()
+#1  0x4037db11 in vPortClearInterruptMaskFromISR (prev_level=<optimized out>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+#2  vPortExitCritical (mux=0x3fcea4b4) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:524
+#3  0x4037d5f0 in xQueueReceive (xQueue=0x3fcea468, pvBuffer=0x3fceb350, xTicksToWait=<optimized out>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/queue.c:1632
+#4  0x4200c0f4 in writer (context=<optimized out>) at /Users/jincheng/Documents/Codex/工作/amoled-pet/main/pet_store.c:24
+
+Thread 8 (Thread 1070188992 "ipc0" (Name: ipc0)):
+#0  0x400559e0 in ?? ()
+#1  0x4037db11 in vPortClearInterruptMaskFromISR (prev_level=<optimized out>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+#2  vPortExitCritical (mux=0x3fc97310 <xKernelLock>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:524
+#3  0x4037f97b in ulTaskGenericNotifyTake (uxIndexToWait=0, xClearCountOnExit=1, xTicksToWait=4294967295) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/tasks.c:5768
+#4  0x40375c32 in ipc_task (arg=0x0) at /Users/jincheng/esp/esp-idf-v5.5.5/components/esp_system/esp_ipc.c:62
+
+Thread 7 (Thread 1070204200 "main" (Name: main)):
+#0  0x400559e0 in ?? ()
+#1  0x4037db11 in vPortClearInterruptMaskFromISR (prev_level=<optimized out>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+#2  vPortExitCritical (mux=0x3fca9ba4) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:524
+#3  0x4037d6da in xQueueSemaphoreTake (xQueue=0x3fca9b58, xTicksToWait=<optimized out>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/queue.c:1853
+#4  0x403786d8 in dev_wait (dev_handle=0x3fceedd0, wait=4294967295) at /Users/jincheng/esp/esp-idf-v5.5.5/components/esp_hw_support/spi_bus_lock.c:609
+#5  spi_bus_lock_acquire_start (dev_handle=0x3fceedd0, wait=4294967295) at /Users/jincheng/esp/esp-idf-v5.5.5/components/esp_hw_support/spi_bus_lock.c:767
+#6  0x40379a41 in spi_device_acquire_bus (device=0x3fca9bb0, wait=4294967295) at /Users/jincheng/esp/esp-idf-v5.5.5/components/esp_driver_spi/src/gpspi/spi_master.c:1366
+#7  0x4205cdde in panel_io_spi_tx_param (io=0x3fceeadc, lcd_cmd=<optimized out>, param=0x3fca0320, param_size=1) at /Users/jincheng/esp/esp-idf-v5.5.5/components/esp_lcd/spi/esp_lcd_panel_io_spi.c:213
+#8  0x4205c6fd in esp_lcd_panel_io_tx_param (io=0x3fceeadc, lcd_cmd=33575168, param=0x3fca0320, param_size=1) at /Users/jincheng/esp/esp-idf-v5.5.5/components/esp_lcd/src/esp_lcd_panel_io.c:23
+#9  0x4200d542 in bsp_display_brightness_set (brightness_percent=<optimized out>) at /Users/jincheng/Documents/Codex/工作/amoled-pet/managed_components/waveshare__esp32_s3_touch_amoled_1_75c/esp32_s3_touch_amoled_1_75c.c:321
+#10 0x420085e4 in app_main () at /Users/jincheng/Documents/Codex/工作/amoled-pet/main/main.c:21
+#11 0x42077e16 in main_task (args=0x0) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/app_startup.c:215
+
+Thread 6 (Thread 1070522096 "swdraw" (Name: swdraw)):
+#0  0x400559e0 in ?? ()
+#1  0x4037db11 in vPortClearInterruptMaskFromISR (prev_level=<optimized out>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+#2  vPortExitCritical (mux=0x3fc97310 <xKernelLock>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:524
+#3  0x4037f97b in ulTaskGenericNotifyTake (uxIndexToWait=0, xClearCountOnExit=1, xTicksToWait=4294967295) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/tasks.c:5768
+#4  0x4202677a in lv_thread_sync_wait (pxCond=0x3fcebed0) at /Users/jincheng/Documents/Codex/工作/amoled-pet/managed_components/lvgl__lvgl/src/osal/lv_freertos.c:215
+#5  0x42037347 in render_thread_cb (ptr=0x3fcebec0) at /Users/jincheng/Documents/Codex/工作/amoled-pet/managed_components/lvgl__lvgl/src/draw/sw/lv_draw_sw.c:358
+#6  0x420265be in prvRunThread (pxArg=0x3fcebec4) at /Users/jincheng/Documents/Codex/工作/amoled-pet/managed_components/lvgl__lvgl/src/osal/lv_freertos.c:436
+
+Thread 5 (Thread 1070195072 "esp_timer" (Name: esp_timer)):
+#0  0x400559e0 in ?? ()
+#1  0x4037db11 in vPortClearInterruptMaskFromISR (prev_level=<optimized out>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+#2  vPortExitCritical (mux=0x3fc97310 <xKernelLock>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:524
+#3  0x4037f97b in ulTaskGenericNotifyTake (uxIndexToWait=0, xClearCountOnExit=1, xTicksToWait=4294967295) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/tasks.c:5768
+#4  0x42061504 in timer_task (arg=<optimized out>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/esp_timer/src/esp_timer.c:459
+
+Thread 4 (Thread 1070251660 "lvgl" (Name: lvgl)):
+#0  0x400559e0 in ?? ()
+#1  0x4037db11 in vPortClearInterruptMaskFromISR (prev_level=<optimized out>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+#2  vPortExitCritical (mux=0x3fc97310 <xKernelLock>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:524
+#3  0x4037f97b in ulTaskGenericNotifyTake (uxIndexToWait=0, xClearCountOnExit=1, xTicksToWait=15) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/tasks.c:5768
+#4  0x4200e608 in lvgl_worker (arg=<optimized out>) at /Users/jincheng/Documents/Codex/工作/amoled-pet/managed_components/espressif__esp_lvgl_adapter/src/adapter/esp_lv_adapter.c:1683
+
+Thread 3 (Thread 1070296052 "pet_power" (Name: pet_power)):
+#0  0x400559e0 in ?? ()
+#1  0x4037db11 in vPortClearInterruptMaskFromISR (prev_level=<optimized out>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+#2  vPortExitCritical (mux=0x3c0c7a24) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:524
+#3  0x4037d5f0 in xQueueReceive (xQueue=0x3c0c79d8, pvBuffer=0x3fcb68d0, xTicksToWait=<optimized out>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/freertos/FreeRTOS-Kernel/queue.c:1632
+#4  0x42074e65 in s_i2c_send_commands (i2c_master=0x3c0c768c, ticks_to_wait=100) at /Users/jincheng/esp/esp-idf-v5.5.5/components/esp_driver_i2c/i2c_master.c:589
+#5  0x42075107 in s_i2c_transaction_start (i2c_dev=<optimized out>, xfer_timeout_ms=<optimized out>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/esp_driver_i2c/i2c_master.c:725
+#6  0x420751d5 in s_i2c_synchronous_transaction (i2c_dev=0x3c0bc054, i2c_ops=0x3fcb6990, ops_dim=6, timeout_ms=100) at /Users/jincheng/esp/esp-idf-v5.5.5/components/esp_driver_i2c/i2c_master.c:1027
+#7  s_i2c_synchronous_transaction (i2c_dev=0x3c0bc054, i2c_ops=0x3fcb6990, ops_dim=6, timeout_ms=100) at /Users/jincheng/esp/esp-idf-v5.5.5/components/esp_driver_i2c/i2c_master.c:1007
+#8  0x42075ea4 in i2c_master_transmit_receive (i2c_dev=<optimized out>, write_buffer=0x3fcb6a20 "I\377?\263", write_size=1, read_buffer=0x3fcb6a50 "", read_size=1, xfer_timeout_ms=<optimized out>) at /Users/jincheng/esp/esp-idf-v5.5.5/components/esp_driver_i2c/i2c_master.c:1333
+#9  0x4200c49c in read_reg (reg=<optimized out>, out=0x3fcb6a50 "", size=1) at /Users/jincheng/Documents/Codex/工作/amoled-pet/main/pet_device.c:20
+#10 key_read (context=0x0, reg=73 'I', value=0x3fcb6a50 "") at /Users/jincheng/Documents/Codex/工作/amoled-pet/main/pet_device.c:42
+#11 0x420711e8 in pet_power_key_poll (io=0x3c0983e0 <key_io>) at /Users/jincheng/Documents/Codex/工作/amoled-pet/main/pet_power_key.c:14
+#12 0x4200c5c5 in power_task (context=<optimized out>) at /Users/jincheng/Documents/Codex/工作/amoled-pet/main/pet_device.c:59
+
+Thread 2 (Thread 1070207976 "IDLE1" (Name: IDLE1, State: Running @CPU1)):
+#0  0x40000400 in ?? ()
+
+Thread 1 (Thread 1070206088 "IDLE0" (Name: IDLE0, State: Running @CPU0)):
+#0  0x40000400 in ?? ()

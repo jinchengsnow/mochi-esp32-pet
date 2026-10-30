@@ -1,0 +1,28 @@
+-- /Users/jincheng/Documents/Codex/工作/amoled-pet/preview/lv_conf.h
+-- Using configuration: /Users/jincheng/Documents/Codex/工作/amoled-pet/preview/lv_conf.h
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/jincheng/Documents/Codex/工作/amoled-pet/build-host/renderer
+[1/2] Building C object 'CMakeFiles/pet_preview.dir/Users/jincheng/Documents/Codex/工作/amoled-pet/main/pet_ui.c.o'
+[2/2] Linking CXX executable pet_preview
+PET state=idle satiety=70 xp=0
+PET state=happy satiety=70 xp=1
+PET state=eating satiety=95 xp=5
+PET state=sleeping satiety=95 xp=5
+PET state=happy satiety=95 xp=5
+PET state=sleeping satiety=95 xp=5
+PET state=idle satiety=95 xp=5
+PET state=sleeping satiety=95 xp=5
+PET state=happy satiety=95 xp=5
+PET state=idle satiety=20 xp=19
+PET state=happy satiety=20 xp=20
+PET state=idle satiety=20 xp=20
+PET state=idle satiety=20 xp=59
+PET state=happy satiety=20 xp=60
+PET state=idle satiety=20 xp=60
+PET state=idle satiety=20 xp=60
+PET state=eating satiety=45 xp=60
+PET state=happy satiety=45 xp=60
+PET state=idle satiety=45 xp=60
+PASS: same-code rendering, touch targets, feeding/full feedback, all growth stages, save restore
+Wrote /Users/jincheng/Documents/Codex/工作/amoled-pet/docs/preview: 4 states, contact sheet, 6.4-second animation

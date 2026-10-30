@@ -1,0 +1,49 @@
+esptool.py v4.12.0
+File size: 809904 (bytes)
+Detected image type: ESP32-S3
+
+ESP32-S3 image header
+=====================
+Image version: 1
+Entry point: 0x4037572c
+Segments: 7
+Flash size: 32MB
+Flash freq: 80m
+Flash mode: DIO
+
+ESP32-S3 extended image header
+==============================
+WP pin: 0xee (disabled)
+Flash pins drive settings: clk_drv: 0x0, q_drv: 0x0, d_drv: 0x0, cs0_drv: 0x0, hd_drv: 0x0, wp_drv: 0x0
+Chip ID: 9 (ESP32-S3)
+Minimal chip revision: v0.0, (legacy min_rev = 0)
+Maximal chip revision: v0.99
+
+Segments information
+====================
+Segment   Length   Load addr   File offs  Memory types
+-------  -------  ----------  ----------  ------------
+      0  0x316d0  0x3c080020  0x00000018  DROM
+      1  0x0372c  0x3fc97b00  0x000316f0  BYTE_ACCESSIBLE, MEM_INTERNAL, DRAM
+      2  0x0b1ec  0x40374000  0x00034e24  MEM_INTERNAL, IRAM
+      3  0x7d2c4  0x42000020  0x00040018  IROM
+      4  0x08840  0x4037f1ec  0x000bd2e4  MEM_INTERNAL, IRAM
+      5  0x00020  0x50000000  0x000c5b2c  RTC_DATA
+      6  0x00030  0x600fe000  0x000c5b54  RTC_DRAM, RTC_IRAM
+
+ESP32-S3 image footer
+=====================
+Checksum: 0x63 (valid)
+Validation hash: 6c74fcba0fceb793aea34e88260c4c1412e5226d7ade8d635ecdd17d45c54713 (valid)
+
+Application information
+=======================
+Project name: amoled_pet
+App version: 0.7.0
+Compile time: Oct 30 2026 11:17:10
+ELF file SHA256: 35ee1a65daab10fe177de8279b8b5287d137918214e522a789205d2189c6ccdc
+ESP-IDF: v5.5.5
+Minimal eFuse block revision: 0.0
+Maximal eFuse block revision: 1.99
+MMU page size: 64 KB
+Secure version: 0

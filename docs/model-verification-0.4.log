@@ -1,0 +1,2 @@
+PASS: hunger/meal limits, growth/cooldown, game scoring/timeout/cancel/reboot, quests/shop/caps, wraparound, poses
+PASS: v2 round trip, v1 fixture migration, every truncation/bit flip, semantic ranges, cooldown restore, fallback

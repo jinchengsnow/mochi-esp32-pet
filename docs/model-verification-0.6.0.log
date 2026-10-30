@@ -1,0 +1,6 @@
+PASS: hunger/meal limits, growth/cooldown, game scoring/timeout/cancel/reboot, quests/shop/caps, wraparound, poses
+PASS: v3 round trip, v1/v2 fixture migration, every truncation/bit flip, semantic ranges, cooldown restore, fallback
+PASS: battery telemetry, strict 10% boundary, zero/full, charge/USB, absent/disabled/invalid/unavailable
+PASS: PWR short-press enable/preserve, stale boot clear, W1C selective ack, long ignored, once-only, I/O retry
+PASS: bright/rest 6x rates, fractional mode switches, 500ms vs bulk, clock rebase/wrap, long sleep/caps, one game settlement
+PASS: 1/2/3 taps, 4-tap suppression, exact gap/hold, swipe/drag, cancel/wrap, affection variants/shared reward/busy/off guards
